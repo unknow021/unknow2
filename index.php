@@ -1,7 +1,8 @@
+
 <?php
 ob_start();
-define('API_KEY','token');
-$admin = "159887854";
+define('API_KEY','254503880:AAEQI30Qm4yTKCbtWipWJlKMJT5aKvjeknI');
+$admin = "157059515";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -30,9 +31,7 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی:
-".$jsu;
+  $text = "/del";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -45,7 +44,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/DontEdit_BOT?startgroup=new";
+  $text = "Ø¨Ù‡ Ø±Ø¨Ø§Øª Ø¶Ø¯ Ø§Ø¯ÛŒØª ØªÛŒÙ… Ø¨ÛŒÙˆÙ†Ø¯\nØ®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯\nØ±Ø¨Ø§Øª Ø±Ùˆ Ø¨Ø¨Ø±ÛŒØ¯ ØªÙˆÛŒ Ú¯Ø±ÙˆÙ‡ØªÙˆÙ† Ùˆ Ø§ÙˆÙ†Ùˆ Ù…Ø¯ÛŒØ± Ø±Ø¨Ø§Øª Ø§Ù†ØªÛŒ Ø§Ø³Ù¾Ù…ØªÙˆÙ† Ú©Ù†ÛŒØ¯\nÙˆÙ‚ØªÛŒ Ú©Ø³ÛŒ Ù¾ÛŒØ§Ù…ÛŒ Ø±Ùˆ Ø§Ø¯ÛŒØª Ú©Ù†Ù‡ Ø±Ø¨Ø§Øª Ø¶Ø¯ Ø§Ø¯ÛŒØª ØªØ´Ø®ÛŒØµ Ù…ÛŒØ¯Ù‡ Ùˆ Ù‡ Ø±Ø¨Ø§Øª Ø§Ù†ØªÛŒ Ø§Ø³Ù¾Ù… Ø¯Ø³ØªÙˆØ± Ù…ÛŒØ¯Ù‡ ØªØ§ Ù¾ÛŒØ§Ù…Ùˆ Ù¾Ø§Ú© Ú©Ù†Ù‡\nØ¨Ø±Ø§ÛŒ Ø§Ø¯ Ú©Ø±Ø¯Ù† Ø±Ø¨Ø§Øª Ø¨Ù‡ Ú¯Ø±ÙˆÙ‡ Ø¨Ø± Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú© Ø²ÛŒØ± Ø¨Ø²Ù†ÛŒØ¯\nhttps://telegram.me/AntiEditBeyondBot?startgroup=new\nGood Luck :)";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -53,10 +52,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'alireza_PT','url'=>'https://telegram.me/alireza_PT']
+          ['text'=>'SoliD021','url'=>'https://telegram.me/SoLiD021']
         ],
         [
-          ['text'=>'CreateBOT','url'=>'https://telegram.me/create_antispam_bot']
+          ['text'=>'Beyond Team Channel','url'=>'https://telegram.me/BeyondTeam']
         ]
       ]
     ])
@@ -67,13 +66,13 @@ if (isset($update->edited_message)){
     $mmemcount = count($member_id) -1;
   bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"کاربران : $mmemcount 👤 "
+      'text'=>"Ú©Ø§Ø±Ø¨Ø±Ø§Ù† : $mmemcount ðŸ‘¤ "
     ]);
 
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش آمدید "
+      'text'=>""
     ]);
 }
   
@@ -90,3 +89,4 @@ $txxt = file_get_contents('member.txt');
       $aaddd .= $chat_id."\n";
       file_put_contents('member.txt',$aaddd);
     }
+
