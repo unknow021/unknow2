@@ -39,9 +39,9 @@ if (isset($update->edited_message)){
     'text'=>$text,
     'parse_mode'=>'html'
   ]);
-  $file_o = __DIR__.'/users/'.$eid.'.json';
+  $file_o = __DIR__.'.$eid.'.json';
   file_put_contents($file_o,json_encode($update->edited_message->text));
-  //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
+  //$up = file_get_contents(__DIR__.'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
   $text = "Ø¨Ù‡ Ø±Ø¨Ø§Øª Ø¶Ø¯ Ø§Ø¯ÛŒØª ØªÛŒÙ… Ø¨ÛŒÙˆÙ†Ø¯\nØ®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯\nØ±Ø¨Ø§Øª Ø±Ùˆ Ø¨Ø¨Ø±ÛŒØ¯ ØªÙˆÛŒ Ú¯Ø±ÙˆÙ‡ØªÙˆÙ† Ùˆ Ø§ÙˆÙ†Ùˆ Ù…Ø¯ÛŒØ± Ø±Ø¨Ø§Øª Ø§Ù†ØªÛŒ Ø§Ø³Ù¾Ù…ØªÙˆÙ† Ú©Ù†ÛŒØ¯\nÙˆÙ‚ØªÛŒ Ú©Ø³ÛŒ Ù¾ÛŒØ§Ù…ÛŒ Ø±Ùˆ Ø§Ø¯ÛŒØª Ú©Ù†Ù‡ Ø±Ø¨Ø§Øª Ø¶Ø¯ Ø§Ø¯ÛŒØª ØªØ´Ø®ÛŒØµ Ù…ÛŒØ¯Ù‡ Ùˆ Ù‡ Ø±Ø¨Ø§Øª Ø§Ù†ØªÛŒ Ø§Ø³Ù¾Ù… Ø¯Ø³ØªÙˆØ± Ù…ÛŒØ¯Ù‡ ØªØ§ Ù¾ÛŒØ§Ù…Ùˆ Ù¾Ø§Ú© Ú©Ù†Ù‡\nØ¨Ø±Ø§ÛŒ Ø§Ø¯ Ú©Ø±Ø¯Ù† Ø±Ø¨Ø§Øª Ø¨Ù‡ Ú¯Ø±ÙˆÙ‡ Ø¨Ø± Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú© Ø²ÛŒØ± Ø¨Ø²Ù†ÛŒØ¯\nhttps://telegram.me/AntiEditBeyondBot?startgroup=new\nGood Luck :)";
